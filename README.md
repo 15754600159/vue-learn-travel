@@ -1,25 +1,14 @@
-# Vue2.5开发去哪儿网App 从零基础入门到实战项目
+### vue cli项目初始化
+1. 项目初始化之后只有简单的vue文件，添加eslint, vuex, router还需要再另外添加插件(vue add 命令)
+2. vue初始化项目有几个方便好用的特性
+	- 组件style标签上加scoped可以实现样式组件化；
+	- 在router文件中用require()动态引入组件可以实现代码分块，延迟加载；
+3. 添加jsconfig.json可对webpack的路径别名进行支持
 
-> 从理论到项目，一个课程涵盖Vue各个层面的基础知识和开发技巧
+### 移动端页面初始化
+1. 引入reset.css样式，解决不用手机端的默认样式不一致问题；
+2. 引入相关样式，解决移动端高倍屏(retina)边框宽度问题(声明为1px，可实际显示不是1px)；
+3. 引入fastclick.js解决移动端点击事件触发有300s延迟的问题；
 
-## 工程启动流程
-
-``` bash
-# 切换到课程章节对应的分支上（重要！）
-git checkout 分支名
-
-# 安装项目依赖
-npm install
-
-# 启动开发环境服务器
-npm run dev
-```
-
-## 常见问题汇总
-
-1. 在手机测试详情页面，向下滚动的时候头部header不会出现,在电脑端是可以的  
-解答：scrollTop的兼容性问题。const top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
-
-### 如果上面的解答依然无法解答你的问题，请在慕课网答疑区留言。非课程相关问题，可以通过下面的微信联系到 Dell Lee ～
-
-<img src="https://git1.imooc.com/Project/coding-203/raw/master/wechat.jpg" width=300 height=400 />
+### 移动端插件
+1. 滚动：betterScroll
